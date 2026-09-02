@@ -1,0 +1,31 @@
+{
+  "name": "aydara-backend",
+  "version": "1.0.0",
+  "description": "AYDARA Luxury Fashion E-Commerce Backend API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js",
+    "db:migrate-supabase": "node src/scripts/migrateToSupabase.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^11.1.0"
+  },
+  "keywords": [
+    "aydara",
+    "luxury",
+    "fashion",
+    "ecommerce"
+  ]
+}
