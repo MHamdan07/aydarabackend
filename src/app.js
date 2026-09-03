@@ -1,14 +1,36 @@
-import express from 'express';
+﻿import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import apiRouter from './routes/api.js';
+import { ENV } from './config/env.js';
 
 const app = express();
 
-// Security & Utility Middlewares
+// Secure CORS configuration supporting production domains, Vercel previews & localhost
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'http://localhost:3000',
+  'http://127.0.0.1:5173',
+  'http://127.0.0.1:5174',
+  ENV.CLIENT_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: '*',
-  credentials: true
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.endsWith('.vercel.app') ||
+      origin.includes('aydara')
+    ) {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin']
 }));
 
 app.use(express.json({ limit: '10mb' }));
@@ -18,9 +40,13 @@ app.use(morgan('dev'));
 // Static files (for local uploads if needed)
 app.use('/uploads', express.static('uploads'));
 
-// Health check
-app.get('/health', (req, res) => {
-  res.json({ status: 'healthy', brand: 'AYDARA Luxury Fashion API', timestamp: new Date() });
+// Health check endpoints
+app.get(['/health', '/api/health', '/api/v1/health'], (req, res) => {
+  res.json({
+    status: 'ok',
+    brand: 'AYDARA Luxury Fashion API',
+    timestamp: new Date().toISOString()
+  });
 });
 
 // API v1 Routes
