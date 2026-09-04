@@ -632,13 +632,13 @@
     ],
     "exchangeRates": {
       "PKR": 1,
-      "USD": 0.003599,
-      "EUR": 0.003103,
-      "GBP": 0.002657,
-      "AED": 0.013231,
-      "SAR": 0.01351,
-      "CAD": 0.005,
-      "AUD": 0.005022
+      "USD": 0.003605,
+      "EUR": 0.003102,
+      "GBP": 0.002667,
+      "AED": 0.013241,
+      "SAR": 0.01352,
+      "CAD": 0.004973,
+      "AUD": 0.00501
     },
     "currencyRounding": {
       "PKR": "integer",
@@ -650,7 +650,7 @@
       "CAD": "decimals",
       "AUD": "decimals"
     },
-    "lastRateUpdate": "2026-08-31T19:07:04.434Z",
+    "lastRateUpdate": "2026-09-04T14:37:51.726Z",
     "publishNote": "Initial production verification",
     "draftSavedAt": "2026-08-28T08:03:06.540Z",
     "draftSavedBy": "AYDARA Directrice"
@@ -659,17 +659,17 @@
     "baseCurrency": "PKR",
     "rates": {
       "PKR": 1,
-      "USD": 0.003599,
-      "EUR": 0.003103,
-      "GBP": 0.002657,
-      "AED": 0.013231,
-      "SAR": 0.01351,
-      "CAD": 0.005,
-      "AUD": 0.005022
+      "USD": 0.003605,
+      "EUR": 0.003102,
+      "GBP": 0.002667,
+      "AED": 0.013241,
+      "SAR": 0.01352,
+      "CAD": 0.004973,
+      "AUD": 0.00501
     },
     "source": "open.er-api.com (Daily Verified)",
-    "fetchedAt": "2026-08-31T19:07:04.434Z",
-    "updatedAt": "2026-08-31T19:07:04.434Z",
+    "fetchedAt": "2026-09-04T14:37:51.726Z",
+    "updatedAt": "2026-09-04T14:37:51.726Z",
     "status": "success"
   },
   "homepage": {
@@ -1539,7 +1539,7 @@
       "lastName": "Hamdan",
       "name": "M Hamdan",
       "email": "entermh07@gmail.com",
-      "passwordHash": "$2b$10$d0eyRwyU1SEn5jKnAwYBRO5QqHF2CxNKuD/d6cEhAyNqBRTNtHJZO",
+      "passwordHash": "/NDa5iMLp/EoOVvj70iohGEMeqYU2T6CJnvQnnAhT0WG",
       "phone": "03107299160",
       "country": "United States",
       "role": "admin",
